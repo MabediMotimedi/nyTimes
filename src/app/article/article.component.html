@@ -1,0 +1,16 @@
+<ion-item *ngIf="article"  [detail]="false">
+   <div slot="start" [class]="'dot dot-unread'"></div>
+  <ion-label class="ion-text-wrap">
+    <h2 class="ion-text-wrap">
+      {{article.title}}
+      <span class="date">
+        <ion-note>{{ article.published_date }}</ion-note>
+        <ion-icon name="chevron-forward" size="small"></ion-icon>
+      </span>
+    </h2>
+    <h3>{{article.byline}}</h3>
+    <p>
+      {{article.abstractA}}
+    </p>
+  </ion-label>
+</ion-item>

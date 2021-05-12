@@ -1,0 +1,45 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="primary">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title *ngIf="noOfDays===1">NYT news ~ last day</ion-title>
+    <ion-title *ngIf="noOfDays===7">NYT news ~ last 7 days</ion-title>
+    <ion-title *ngIf="noOfDays===30">NYT news ~ last 30 days</ion-title>
+    <ion-buttons slot="secondary">
+      <ion-button>
+        <ion-icon slot="end" name="search"></ion-icon>
+      </ion-button>
+      <ion-button (click)="presentPopover($event)">
+        <ion-icon name="ellipsis-vertical"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-refresher slot="fixed" (ionRefresh)="refresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">
+        NY Times Most Popular Articles
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-list>
+    <ion-item *ngFor="let article of articles.results; let index = index;" (click)="getArticleDetailsById(article.id)">
+      <div slot="start" [class]="'dot dot-unread'"></div>
+      <ion-label style="width: 70%;">
+        <h2>{{article.title}}</h2>
+        <p>{{article.byline}}</p>
+      </ion-label>
+
+        <p style="float: right;">{{article.published_date}}</p>
+
+    </ion-item>
+  </ion-list>
+</ion-content>
