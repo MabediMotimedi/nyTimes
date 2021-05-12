@@ -2,12 +2,11 @@
 There are two ways in which you can install and run the app.
 #to make sure you are all set up visit https://ionicframework.com/getting-started
 
-- running App via browser
+#### running App via browser#### 
    -open floder in locatoin
    -on your terminal run >ionic serve 
 
-#^
-- Installing the app to your phone via the Source code
+####  Installing the app to your phone via the Source code#### 
 
    -Pre-requisite
    -Install node.js
