@@ -10,9 +10,13 @@ There are two ways in which you can install and run the app.
 ####  Installing the app to your phone via the Source code
 
    -Pre-requisite
+   
    -Install node.js
+   
    -Install Visual Studio code(VsCode) or any IDE of your choice that supports angular
+   
    -Install Java 8
+   
    -Unzip the APKANDSOURCECODE file
    -On Vscode open the NYTIMES folder (make sure NYTIMES is your root folder)
    -Open a new terminal
